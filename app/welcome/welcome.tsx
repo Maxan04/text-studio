@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
@@ -25,6 +26,7 @@ export function Welcome() {
               What&apos;s next?
             </p>
             <ul>
+              
               {resources.map(({ href, text, icon }) => (
                 <li key={href}>
                   <a
@@ -41,6 +43,7 @@ export function Welcome() {
             </ul>
           </nav>
         </div>
+        <Link to="/text-studio">Gå till Text Studio</Link>
       </div>
     </main>
   );
