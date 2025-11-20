@@ -1,87 +1,52 @@
-# Welcome to React Router!
+# **Text Studio – React Router Project**
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Text Studio är ett React Router-baserat projekt där användaren kan skriva in text, välja ett transformationsläge och generera bearbetad text. Syftet är att skapa en enkel men flexibel texteditor med stöd för flera kreativa skrivlägen.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🚀 **Starta projektet**
 
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
+1. Installera dependencies:
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+2. Kör utvecklingsservern:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+3. Öppna i webbläsaren:
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+http://localhost:3000
 ```
 
-## Styling
+## ✨ **Funktioner**
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+* Stor textarea för inmatning av text
+* Dropdown för att välja transformation
+* Generate-knapp
+* Output-ruta som visar resultatet
+* Route-baserad struktur (`/` och `/text-studio`)
+
+## 🔧 **Transformationslägen**
+
+I Text Studio finns just nu följande lägen:
+
+* **Summary** – Kortar ner text och sammanfattar den
+* **Rewrite** – Skriver om texten i en ny stil
+* **Social post** – Genererar text anpassad för sociala medier
+* **Campaign intro** – Skapar en enklare introduktion för marknadsföringssyfte
+
+(*Observera att nuvarande version endast simulerar logiken — detta kan senare bytas mot riktig AI-bearbetning.*)
+
+## 🛠 **Vad jag gjort**
+
+* Skapat ett React Router-projekt med anpassad routestruktur
+* Lagt till en ny sida: **/text-studio**
+* Byggt UI för textinmatning, mode-val och output
+* Implementerat Generate-funktion med state-hantering
+* Flyttat routinglogik till `app/routes.ts` för att stödja dynamiska sidor
 
 ---
-
-Built with ❤️ using React Router.

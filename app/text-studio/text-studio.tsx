@@ -7,6 +7,10 @@ export default function TextStudio() {
 
   const modes = ["Summary", "Rewrite", "Social post", "Campaign intro"];
 
+  const handleGenerate = () => {
+    setOutput(`Mode: ${mode}\nResultat:\n${text.toUpperCase()}`);
+  };
+
   return (
     <main className="p-8 min-h-screen bg-gray-900">
       <h1 className="text-3xl font-bold mb-6 text-gray-100">
@@ -40,6 +44,7 @@ export default function TextStudio() {
       </div>
 
       <button
+      onClick={handleGenerate}
         className="mb-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg
                   shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
