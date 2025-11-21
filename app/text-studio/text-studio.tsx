@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { mockTransform } from "~/lib/mockTransform";
 
 export default function TextStudio() {
   const [text, setText] = useState("");
@@ -8,7 +9,8 @@ export default function TextStudio() {
   const modes = ["Summary", "Rewrite", "Social post", "Campaign intro"];
 
   const handleGenerate = () => {
-    setOutput(`Mode: ${mode}\nResultat:\n${text.toUpperCase()}`);
+    const result = mockTransform(mode, text);
+    setOutput(result);
   };
 
   return (
